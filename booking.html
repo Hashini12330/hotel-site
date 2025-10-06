@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Booking Form</title> 
+    <link rel="stylesheet" href="style.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!--font awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+
+
+    <!--Make place holder-->       
+    <!-- flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    
+
+
+</head>
+<body class="booking-page">
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar" >
+            <div class="logoANDname">   <!--wrap the logo and hotel name-->
+                <a href="index.html"><img src="images/logo.jpg" alt="logo img" class="logo"></a>
+                <a href="index.html" id="nameofthesite"><h1 id="styletext">Sunrise Hotel</h1></a>        
+            
+            </div>
+
+            <ul class="nav-links">
+                
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="facilities.html">ROOMS & FACILITIES</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>          
+        </nav>
+    </header>
+
+    <section>
+        <form name="booking info" targe="_blank" class="input-booking">
+            <input type="text" name="name" id="name" placeholder="Name Surname" required>
+            <input type="text" name="country" id="country" placeholder="Country" required>
+            <input type="text" name="e-mail" id="e-mail" placeholder="E-mail" required>
+            <input type="text" name="Phone" id="phone" placeholder="Phone" required>
+            
+            <!--Choose rooms-->
+
+            <div class="option-container"></div>
+            <select name="room-name" required class="option-list">
+                
+                <option>-Please choose an option-</option>
+                <option>Cactus Room</option>
+                <option>Aloe Vera Room</option>
+                <option>Bonsai Room</option>
+                <option>Gusmania Room</option>
+                <option>Palm Suite</option>
+                <option>Cactus Suite </option>
+                <option> Lotus Suite </option>
+                <option>Jesmine Suite </option>
+                <option>Suite Family </option>
+                <option>Purple Family </option>
+                <option>Holy Family </option>
+                <option>Crazy Family </option>
+                <option> Rose Room </option>
+                <option> Lily Room </option>
+                
+            </select>
+
+            <input type="date" name="Check In" id="check-in" placeholder="Check In" required>
+            <input type="date" name="Check Out" id="check-out" placeholder="Check Out" required>
+            <input type="text" name="adults" id="adultat" placeholder="Adults" required>
+            <input type="text" name="children" id="children" placeholder="Children" required><br>
+            <input type="submit" value="BOOK NOW" id="book-buton">
+        </form>
+    </section>
+
+    <script src="hotel.js"></script> <!--it was not use-->
+
+    <!-- flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- initialize flatpickr -->
+    <script>
+    flatpickr("#check-in", { dateFormat: "m/d/Y", allowInput: true });
+    flatpickr("#check-out", { dateFormat: "m/d/Y", allowInput: true });
+    </script>
+
+
+</body>
+</html>
